@@ -1,5 +1,6 @@
 // import 'dart:html';
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flash_chat_starting_project/screens/login_screen.dart';
 import 'package:flash_chat_starting_project/screens/registration_screen.dart';
 
@@ -61,14 +62,17 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     child: Image.asset('images/logo.png'),
                   ),
                 ),
-                Text(
-                  'flash chat',
-                  style: const TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.white,
+                  DefaultTextStyle(
+                    style:const TextStyle(
+                      fontSize: 45.0,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white,
+                    ),
+                    child: AnimatedTextKit(animatedTexts: [
+                      TypewriterAnimatedText('Flash Chat')
+                    ] ),
                   ),
-                ),
+
               ],
             ),
             const SizedBox(
